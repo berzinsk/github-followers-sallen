@@ -14,6 +14,7 @@
 		123E830F29977FA10006E760 /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123E830E29977FA10006E760 /* GFAlertContainerView.swift */; };
 		1259F61729978C0A00C8F2F0 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1259F61629978C0A00C8F2F0 /* Follower.swift */; };
 		1259F61929978CA200C8F2F0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1259F61829978CA200C8F2F0 /* User.swift */; };
+		1259F61C2997903700C8F2F0 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1259F61B2997903700C8F2F0 /* NetworkProvider.swift */; };
 		12AA89CE2996C11900C4E62A /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AA89CD2996C11900C4E62A /* FollowerListVC.swift */; };
 		12F85E67299668DB00FBBB8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F85E66299668DB00FBBB8C /* AppDelegate.swift */; };
 		12F85E69299668DB00FBBB8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F85E68299668DB00FBBB8C /* SceneDelegate.swift */; };
@@ -33,6 +34,7 @@
 		123E830E29977FA10006E760 /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 		1259F61629978C0A00C8F2F0 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		1259F61829978CA200C8F2F0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1259F61B2997903700C8F2F0 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		12AA89CD2996C11900C4E62A /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 		12F85E63299668DB00FBBB8C /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F85E66299668DB00FBBB8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1259F61A2997902A00C8F2F0 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				1259F61B2997903700C8F2F0 /* NetworkProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
 		12F85E5A299668DB00FBBB8C = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		12F85E65299668DB00FBBB8C /* GHFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				1259F61A2997902A00C8F2F0 /* Providers */,
 				1259F61529978BFF00C8F2F0 /* Model */,
 				123E830B29977E910006E760 /* Support */,
 				123E830A29977E130006E760 /* CustomViews */,
@@ -221,6 +232,7 @@
 				12AA89CE2996C11900C4E62A /* FollowerListVC.swift in Sources */,
 				12F85E67299668DB00FBBB8C /* AppDelegate.swift in Sources */,
 				12F85E69299668DB00FBBB8C /* SceneDelegate.swift in Sources */,
+				1259F61C2997903700C8F2F0 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
