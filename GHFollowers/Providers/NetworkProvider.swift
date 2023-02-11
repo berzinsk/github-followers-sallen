@@ -7,13 +7,6 @@
 
 import Foundation
 
-enum GHError: String, Error {
-    case invalidUsername = "This username created an invalid request. Please try again."
-    case unableToComplete = "Unable to complete your request. Please check your internet connection"
-    case invalidResponse = "Invalid response from the server. Please try again."
-    case invalidData = "The data received from the server was invalid. Please try again."
-}
-
 class NetworkProvider {
     static let shared = NetworkProvider()
 
@@ -21,7 +14,7 @@ class NetworkProvider {
 
     private init() {}
 
-    func getFollowers(for username: String, page: Int = 0, completion: @escaping (Result<[Follower], GHError>) -> Void) {
+    func getFollowers(for username: String, page: Int = 0, completion: @escaping (Result<[Follower], GFError>) -> Void) {
         let endpoint = baseUrl + "\(username)/followers?per_page=100&page=\(page)"
 
         guard let url = URL(string: endpoint) else {
