@@ -16,6 +16,8 @@
 		1259F61929978CA200C8F2F0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1259F61829978CA200C8F2F0 /* User.swift */; };
 		1259F61C2997903700C8F2F0 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1259F61B2997903700C8F2F0 /* NetworkProvider.swift */; };
 		1259F61F2997BD8F00C8F2F0 /* GFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1259F61E2997BD8F00C8F2F0 /* GFError.swift */; };
+		1259F6222997C30300C8F2F0 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1259F6212997C30300C8F2F0 /* FollowerCell.swift */; };
+		1259F6242997C35F00C8F2F0 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1259F6232997C35F00C8F2F0 /* GFAvatarImageView.swift */; };
 		12AA89CE2996C11900C4E62A /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AA89CD2996C11900C4E62A /* FollowerListVC.swift */; };
 		12F85E67299668DB00FBBB8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F85E66299668DB00FBBB8C /* AppDelegate.swift */; };
 		12F85E69299668DB00FBBB8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F85E68299668DB00FBBB8C /* SceneDelegate.swift */; };
@@ -37,6 +39,8 @@
 		1259F61829978CA200C8F2F0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1259F61B2997903700C8F2F0 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		1259F61E2997BD8F00C8F2F0 /* GFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFError.swift; sourceTree = "<group>"; };
+		1259F6212997C30300C8F2F0 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
+		1259F6232997C35F00C8F2F0 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		12AA89CD2996C11900C4E62A /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 		12F85E63299668DB00FBBB8C /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F85E66299668DB00FBBB8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,12 +86,14 @@
 		123E830A29977E130006E760 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				1259F6202997C2E500C8F2F0 /* Cells */,
 				123E830E29977FA10006E760 /* GFAlertContainerView.swift */,
 				123E8304299773A90006E760 /* GFAlertVC.swift */,
 				123E83022997731A0006E760 /* GFBodyLabel.swift */,
 				12F85E7E2996ADF600FBBB8C /* GFButton.swift */,
 				12F85E802996B0C900FBBB8C /* GFTextField.swift */,
 				123E8300299771B00006E760 /* GFTitleLabel.swift */,
+				1259F6232997C35F00C8F2F0 /* GFAvatarImageView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -126,6 +132,14 @@
 				1259F61E2997BD8F00C8F2F0 /* GFError.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1259F6202997C2E500C8F2F0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1259F6212997C30300C8F2F0 /* FollowerCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		12F85E5A299668DB00FBBB8C = {
@@ -236,6 +250,8 @@
 				12F85E7F2996ADF600FBBB8C /* GFButton.swift in Sources */,
 				123E8307299778EA0006E760 /* UIViewController+Ext.swift in Sources */,
 				12F85E7B2996804A00FBBB8C /* SearchVC.swift in Sources */,
+				1259F6222997C30300C8F2F0 /* FollowerCell.swift in Sources */,
+				1259F6242997C35F00C8F2F0 /* GFAvatarImageView.swift in Sources */,
 				1259F61929978CA200C8F2F0 /* User.swift in Sources */,
 				123E8305299773A90006E760 /* GFAlertVC.swift in Sources */,
 				1259F61729978C0A00C8F2F0 /* Follower.swift in Sources */,
