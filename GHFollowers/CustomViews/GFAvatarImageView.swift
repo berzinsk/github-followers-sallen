@@ -22,6 +22,8 @@ class GFAvatarImageView: UIImageView {
 
     init() {
         super.init(frame: .zero)
+
+        configure()
     }
 
     private func configure() {
