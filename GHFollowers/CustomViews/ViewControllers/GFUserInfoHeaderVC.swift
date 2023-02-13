@@ -22,8 +22,19 @@ class GFUserInfoHeaderVC: UIViewController {
         stack.axis = .horizontal
         stack.spacing = 5
         stack.alignment = .leading
-        stack.distribution = .fillProportionally
+        stack.distribution = .fill
         [self.locationImageView, self.locationLabel].forEach { stack.addArrangedSubview($0) }
+
+        return stack
+    }()
+
+    private lazy var userInfoStackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.spacing = 12
+        stack.alignment = .top
+        stack.distribution = .fill
+        [self.usernameLabel, self.nameLabel, self.locationStackView].forEach { stack.addArrangedSubview($0) }
 
         return stack
     }()
@@ -62,7 +73,7 @@ class GFUserInfoHeaderVC: UIViewController {
         view.addSubview(avatarImageView)
         view.addSubview(usernameLabel)
         view.addSubview(nameLabel)
-        view.addSubview(locationStackView)
+        view.addSubview(userInfoStackView)
         view.addSubview(bioLabel)
     }
 
@@ -70,6 +81,7 @@ class GFUserInfoHeaderVC: UIViewController {
         let padding: CGFloat = 20
         let textImagePadding: CGFloat = 12
         locationStackView.translatesAutoresizingMaskIntoConstraints = false
+        userInfoStackView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
             avatarImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
@@ -77,24 +89,13 @@ class GFUserInfoHeaderVC: UIViewController {
             avatarImageView.widthAnchor.constraint(equalToConstant: 90),
             avatarImageView.heightAnchor.constraint(equalTo: avatarImageView.widthAnchor),
 
-            usernameLabel.topAnchor.constraint(equalTo: avatarImageView.topAnchor),
-            usernameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: textImagePadding),
-            usernameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            usernameLabel.heightAnchor.constraint(equalToConstant: 38),
-
-            nameLabel.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor, constant: 8),
-            nameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: textImagePadding),
-            nameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            nameLabel.heightAnchor.constraint(equalToConstant: 20),
-
             locationImageView.widthAnchor.constraint(equalToConstant: 20),
             locationImageView.heightAnchor.constraint(equalTo: locationImageView.widthAnchor),
 
-            locationStackView.bottomAnchor.constraint(equalTo: avatarImageView.bottomAnchor),
-            locationStackView.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: textImagePadding),
-            locationStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
-            locationStackView.heightAnchor.constraint(equalToConstant: 20),
-
+            userInfoStackView.topAnchor.constraint(equalTo: avatarImageView.topAnchor),
+            userInfoStackView.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: textImagePadding),
+            userInfoStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            userInfoStackView.heightAnchor.constraint(equalTo: avatarImageView.heightAnchor),
 
             bioLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: textImagePadding),
             bioLabel.leadingAnchor.constraint(equalTo: avatarImageView.leadingAnchor),
