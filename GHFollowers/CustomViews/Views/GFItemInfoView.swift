@@ -51,7 +51,7 @@ class GFItemInfoView: UIView {
         addSubview(countLabel)
 
         symbolImageView.translatesAutoresizingMaskIntoConstraints = false
-        symbolImageView.contentMode = .scaleToFill
+        symbolImageView.contentMode = .scaleAspectFit
         symbolImageView.tintColor = .label
 
         NSLayoutConstraint.activate([
