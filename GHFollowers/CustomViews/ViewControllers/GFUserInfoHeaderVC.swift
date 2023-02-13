@@ -85,7 +85,7 @@ class GFUserInfoHeaderVC: UIViewController {
 
         NSLayoutConstraint.activate([
             avatarImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
-            avatarImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            avatarImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             avatarImageView.widthAnchor.constraint(equalToConstant: 90),
             avatarImageView.heightAnchor.constraint(equalTo: avatarImageView.widthAnchor),
 
@@ -94,12 +94,12 @@ class GFUserInfoHeaderVC: UIViewController {
 
             userInfoStackView.topAnchor.constraint(equalTo: avatarImageView.topAnchor),
             userInfoStackView.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: textImagePadding),
-            userInfoStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            userInfoStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             userInfoStackView.heightAnchor.constraint(equalTo: avatarImageView.heightAnchor),
 
             bioLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: textImagePadding),
             bioLabel.leadingAnchor.constraint(equalTo: avatarImageView.leadingAnchor),
-            bioLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            bioLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             bioLabel.heightAnchor.constraint(equalToConstant: 60),
         ])
     }
