@@ -9,7 +9,6 @@ import UIKit
 
 class GFItemInfoVC: UIViewController {
     var user: User!
-    weak var delegate: UserInfoVCDelegate?
 
     let itemInfoViewOne = GFItemInfoView()
     let itemInfoViewTwo = GFItemInfoView()
@@ -55,8 +54,7 @@ class GFItemInfoVC: UIViewController {
 
 
     private func layoutUI() {
-        view.addSubview(stackView)
-        view.addSubview(actionButton)
+        view.addSubviews(stackView, actionButton)
 
         stackView.translatesAutoresizingMaskIntoConstraints = false
         let padding: CGFloat = 20
