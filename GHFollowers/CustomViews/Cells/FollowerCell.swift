@@ -12,7 +12,6 @@ class FollowerCell: UICollectionViewCell {
 
     private let avatarImageView = GFAvatarImageView()
     private let usernameLabel = GFTitleLabel(textAlignment: .center, fontSize: 14)
-    private let padding: CGFloat = 8
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,15 +25,12 @@ class FollowerCell: UICollectionViewCell {
 
     func set(follower: Follower) {
         usernameLabel.text = follower.login
-        NetworkProvider.shared.downloadImage(from: follower.avatarUrl) { [weak self] image in
-            DispatchQueue.main.async {
-                self?.avatarImageView.image = image
-            }
-        }
+        avatarImageView.downloadImage(fromURL: follower.avatarUrl)
     }
 
     private func configure() {
         addSubviews(avatarImageView, usernameLabel)
+        let padding: CGFloat = 8
 
         NSLayoutConstraint.activate([
             avatarImageView.topAnchor.constraint(equalTo: topAnchor, constant: padding),
