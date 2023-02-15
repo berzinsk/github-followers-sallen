@@ -95,6 +95,9 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
             try PersistenceProvider.updateWith(favorite: favorites[indexPath.row], actionType: .remove)
             favorites.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .left)
+            if favorites.isEmpty {
+                showEmptyStateView(with: "No Favorites?\nAdd one on the follower screen.", in: view)
+            }
         } catch let error as GFError {
             presentGFAlert(title: "Unable to remove", message: error.rawValue, buttonTitle: "Ok")
         } catch {
