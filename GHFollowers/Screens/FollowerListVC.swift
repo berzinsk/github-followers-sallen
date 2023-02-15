@@ -158,18 +158,13 @@ class FollowerListVC: GFDataLoadingVC {
     private func addUserToFavorites(user: User) {
         let follower = Follower(login: user.login, avatarUrl: user.avatarUrl)
 
-        PersistenceProvider.updateWith(favorite: follower, actionType: .add) { [weak self] error in
-            guard let self else { return }
-            guard let error else {
-                DispatchQueue.main.async {
-                    self.presentGFAlert(title: "Success!", message: "You have successfully added this user to your favorites 🎉.", buttonTitle: "Hooray")
-                }
-                return
-            }
-
-            DispatchQueue.main.async {
-                self.presentGFAlert(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
-            }
+        do {
+            try PersistenceProvider.updateWith(favorite: follower, actionType: .add)
+            presentGFAlert(title: "Success!", message: "You have successfully added this user to your favorites 🎉.", buttonTitle: "Hooray")
+        } catch let error as GFError {
+            presentGFAlert(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+        } catch {
+            presentDefaultError()
         }
     }
 }
