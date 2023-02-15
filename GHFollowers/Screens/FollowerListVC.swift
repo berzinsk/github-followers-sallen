@@ -78,7 +78,6 @@ class FollowerListVC: GFDataLoadingVC {
         showLoadingView()
         isLoadingMoreFollowers = true
 
-        #warning("Refactor this for learning with async function")
         Task {
             do {
                 let followers = try await NetworkProvider.shared.getFollowers(for: username, page: page)
