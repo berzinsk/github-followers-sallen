@@ -11,6 +11,7 @@ enum PersistenceActionType {
     case add, remove
 }
 
+#warning("Refactor to async/await")
 enum PersistenceProvider {
     enum Keys {
         static let favorites = "favorites"
